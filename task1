@@ -1,0 +1,15 @@
+import pandas as pd
+from pathlib import Path
+file_path = Path(r"C:\Users\aayus\Desktop\machine_temp_failure_missing.csv")
+print(file_path.exists())
+df = pd.read_csv(file_path)
+print(df.head())
+missing_values = df.isnull().sum()
+print(missing_values)
+mean_values = df.mean()
+max_values = df.max()
+min_values = df.min()
+
+print(mean_values)
+print(max_values)
+print(min_values)
